@@ -52,7 +52,7 @@ primary_headers = ['Device ID', 'Host Name']
 
 # --------------------------------------------------------------------------------
 # Unremark following line and use for old Device Templates
-# primary_headers = ['csv-deviceId','csv-deviceIP']
+# primary_headers = ['csv-deviceId', 'csv-deviceIP', 'csv-host-name']
 
 for h in primary_headers:
     currentcsv_column_names.discard(h)
