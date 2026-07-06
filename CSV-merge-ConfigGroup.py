@@ -9,11 +9,13 @@
 #      Fixed a bug with CSV format inserting an unneccessary space ' '
 #
 #  Version 2026-04-28
-#      Fixed a bug where a blank column and a duplciate deviceID is present.    
+#      Fixed a bug where a blank column and a duplciate deviceID is present.   
+#  Version 2026-07-06
+#      Fixed an issue with hidden Excel formatting errors on Device-ID
 #
 #  Python dependencies:
 #     pandas  (i.e. pip install pandas )
-print('CSV consolidation tool.   Version: 2026-04-28')
+print('CSV consolidation tool.   Version: 2026-07-06')
 print('---------------------------------------------')
 
 
@@ -63,7 +65,7 @@ finalcsv_column_names = primary_headers + sorted(list(currentcsv_column_names))
 
 
 for file in csv_files:
-  with open(file, 'r', encoding='utf-8') as read_obj:
+  with open(file, 'r', encoding='utf-8-sig') as read_obj:
         csv_dict_reader = DictReader(read_obj)
         for row in csv_dict_reader:
             companyRowData = []
