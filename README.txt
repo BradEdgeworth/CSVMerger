@@ -15,4 +15,4 @@ Install dependencies:
     pip install pandas
 
 # Author
-Brad Edgeworth, brad@config-t.com
+Brad Edgeworth
